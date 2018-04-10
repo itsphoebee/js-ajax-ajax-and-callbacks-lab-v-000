@@ -30,8 +30,7 @@ function showCommits(el) {
     let commits = response.map(c => { return (
       `<h3>${c.sha}</h3>
       <p>${c.commit.message}</p>
-      <img src="${c.author.avatar_url}" height="32" width="32"><br/>
-      ${c.commit.author.name} (<a href="${c.author.url}">${c.author.login}</a>)`
+      <hr>`
     )});
     document.getElementById("details").innerHTML = commits
   }).fail(error => {
