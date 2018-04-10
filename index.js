@@ -14,8 +14,7 @@ function searchRepositories() {
       `<h3><a href="${r.html_url}">${r.name}</a></h3>
       <p>${r.description}</p>
       <small><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></small>
-      <p></p>
-      <img src="${r.owner.avatar_url}" height="32" width="32"/><br />
+      <img src="${r.owner.avatar_url}" height="32" width="32"/><br>
       <a href="${r.owner.url}" target="_blank">${r.owner.login}</a>
       <hr>`
     )})
