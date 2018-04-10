@@ -13,8 +13,7 @@ function searchRepositories() {
     const results = response.items.map(r => { return (
       `<strong><a href="${r.html_url}" target="_blank">${r.name}</a></strong>
       <p>${r.description}</p>
-      <small><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></small>
-      <p></p>
+      <a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a>
       <img src="${r.owner.avatar_url}" height="32" width="32"/><br />
       <a href="${r.owner.url}" target="_blank">${r.owner.login}</a>
       <hr>`
