@@ -17,8 +17,8 @@ function searchRepositories() {
       <img src="${r.owner.avatar_url}" height="32" width="32"/><br>
       <a href="${r.owner.url}" target="_blank">${r.owner.login}</a>
       <hr>`
-      document.getElementById("results").innerHTML = results
     )})
+    document.getElementById("results").innerHTML = results
   }).fail(error => {
     displayError()
   });
