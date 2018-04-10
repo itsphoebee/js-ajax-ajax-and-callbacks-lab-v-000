@@ -34,8 +34,7 @@ function showCommits(el) {
       `${c.sha}<br />
       ${c.commit.message}</p>
       <img src="${c.author.avatar_url}" height="32" width="32"/><br/>
-      By ${c.commit.author.name} (<a href="${c.author.url}" target="_blank">${c.author.login}</a>)
-      <hr>`
+      By ${c.commit.author.name} (<a href="${c.author.url}" target="_blank">${c.author.login}</a>`
     )});
     document.getElementById("details").innerHTML = commits
   }).fail(error => {
