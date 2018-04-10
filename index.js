@@ -14,7 +14,7 @@ function searchRepositories() {
       `<h2><a href="${r.html_url}">${r.name}</a></h2>
       <p><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
       <p>${r.description}</p>
-      `
+      <hr>`
     )})
     document.getElementById("results").innerHTML = results
   }).fail(error => {
