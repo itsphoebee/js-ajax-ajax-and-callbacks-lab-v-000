@@ -11,7 +11,7 @@ function searchRepositories() {
   let url = `https://api.github.com/search/repositories?q=${searchTerms}`;
   $.get(url).done(function(response) {
     const results = response.items.map(r => { return (
-      `<h4><a href="${r.html_url}">${r.name}</a></h4><br>
+      `<h4><a href="${r.html_url}">${r.name}</a></h4>
       <p>${r.description}</p><br>
       <small><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></small>
       <p></p>
