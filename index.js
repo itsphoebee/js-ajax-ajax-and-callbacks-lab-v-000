@@ -31,8 +31,7 @@ function showCommits(el) {
   const url = `https://api.github.com/repos/${username}/${repo}/commits`
   $.get(url).done(function(response) {
     let commits = response.map(c => { return (
-      `${c.sha}<br />
-      ${c.commit.message}</p>
+      `${c.sha} | ${c.commit.message}
       <img src="${c.author.avatar_url}" height="32" width="32"/><br/>
       By ${c.commit.author.name} <a href="${c.author.url}" target="_blank">${c.author.login}</a>`
     )});
