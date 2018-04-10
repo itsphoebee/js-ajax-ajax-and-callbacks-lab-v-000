@@ -15,8 +15,7 @@ function searchRepositories() {
       <p>${r.description}</p>
       <small><a href="#" data-repository="${r.name}" data-owner="${r.owner.login}" onclick="showCommits(this)">Show Commits</a></small>
       <img src="${r.owner.avatar_url}" height="32" width="32"/><br>
-      <a href="${r.owner.url}" target="_blank">${r.owner.login}</a>
-      <hr>`
+      <a href="${r.owner.url}" target="_blank">${r.owner.login}</a>`
     )})
     document.getElementById("results").innerHTML = results
   }).fail(error => {
