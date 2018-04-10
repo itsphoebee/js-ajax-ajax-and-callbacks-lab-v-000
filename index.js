@@ -29,7 +29,7 @@ function showCommits(el) {
   $.get(url).done(function(response) {
     let commits = response.map(c => { return (
       `<h3>${c.sha}</h3>
-      ${c.commit.message}</p>
+      <p>${c.commit.message}</p>
       <img src="${c.author.avatar_url}" height="32" width="32"><br/>
       ${c.commit.author.name} (<a href="${c.author.url}">${c.author.login}</a>)`
     )});
